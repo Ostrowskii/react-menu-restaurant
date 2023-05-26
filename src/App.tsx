@@ -1,10 +1,12 @@
-import ListGroup from "./components/ListGroup";
+import Home from "./components/home/home";
+import LowerMenu from "./components/shared/lowerMenu";
 function App() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
   return (
     <div>
-      <ListGroup items={items} heading="Cities" />
+      <Home></Home>
+      <LowerMenu></LowerMenu>
     </div>
   );
 }
