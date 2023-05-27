@@ -1,4 +1,4 @@
-import Home from "./components/home/home";
+import Home from "./components/client/home";
 import LowerMenu from "./components/shared/clientLowerMenu";
 function App() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
