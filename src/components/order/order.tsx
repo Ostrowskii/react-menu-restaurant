@@ -1,10 +1,10 @@
-import LowerMenu from "../shared/lowerMenu";
+import ClientLowerMenu from "../shared/clientLowerMenu";
 
 function Order() {
   return (
     <>
       <h1>Order</h1>
-      <LowerMenu></LowerMenu>
+      <ClientLowerMenu></ClientLowerMenu>
     </>
   );
 }

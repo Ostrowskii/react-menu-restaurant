@@ -1,25 +1,25 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import HomeSvg from "../../assets/home.svg";
-import MenuSvg from "../../assets/menu.svg";
+import EditSvg from "../../assets/adminEdit.svg";
 import OrderSvg from "../../assets/order.svg";
 
-function LowerMenu() {
+function AdminLowerMenu() {
   const buttonleft = {
     height: 100,
-    backgroundColor: "blue",
+    backgroundColor: "green",
 
     "border-radius": "10px 0px 0 0",
   };
   const buttonMidle = {
     height: 100,
-    backgroundColor: "blue",
+    backgroundColor: "green",
 
     "border-radius": "0px",
   };
   const buttonRight = {
     height: 100,
-    backgroundColor: "blue",
+    backgroundColor: "green",
 
     "border-radius": "0px 10px 0 0",
   };
@@ -27,15 +27,15 @@ function LowerMenu() {
   const navigate = useNavigate();
 
   function navigateToHome() {
-    navigate("/");
+    navigate("/admHome");
   }
 
   function navigateToMenu() {
-    navigate("/menu");
+    navigate("/admMenu");
   }
 
-  function navigateToOrder() {
-    navigate("/order");
+  function navigateToOrders() {
+    navigate("/admOrders");
   }
   return (
     <div
@@ -57,17 +57,17 @@ function LowerMenu() {
         className="btn btn-lg"
         onClick={navigateToMenu}
       >
-        <img src={MenuSvg} alt="menu" />
+        <img src={EditSvg} alt="menu" />
       </button>
       <button
         style={buttonRight}
         type="button"
         className="btn btn-lg"
-        onClick={navigateToOrder}
+        onClick={navigateToOrders}
       >
         <img src={OrderSvg} alt="order" />
       </button>
     </div>
   );
 }
-export default LowerMenu;
+export default AdminLowerMenu;

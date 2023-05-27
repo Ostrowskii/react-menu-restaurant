@@ -1,4 +1,4 @@
-import LowerMenu from "../shared/lowerMenu";
+import ClientLowerMenu from "../shared/clientLowerMenu";
 
 function Menu() {
   const menuItems = [
@@ -37,7 +37,7 @@ function Menu() {
           </li>
         ))}
       </ul>
-      <LowerMenu></LowerMenu>
+      <ClientLowerMenu></ClientLowerMenu>
     </>
   );
 }
