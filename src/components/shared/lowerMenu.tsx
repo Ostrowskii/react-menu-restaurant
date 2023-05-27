@@ -5,11 +5,27 @@ import MenuSvg from "../../assets/menu.svg";
 import OrderSvg from "../../assets/order.svg";
 
 function LowerMenu() {
+  const buttonleft = {
+    height: 100,
+    backgroundColor: "blue",
+
+    "border-radius": "10px 0px 0 0",
+  };
+  const buttonMidle = {
+    height: 100,
+    backgroundColor: "blue",
+
+    "border-radius": "0px",
+  };
+  const buttonRight = {
+    height: 100,
+    backgroundColor: "blue",
+
+    "border-radius": "0px 10px 0 0",
+  };
+
   const navigate = useNavigate();
-  // function AcessHome() {
-  //   const navigate = useNavigate();
-  //   navigate("/");
-  // }
+
   function navigateToHome() {
     navigate("/");
   }
@@ -28,22 +44,25 @@ function LowerMenu() {
       aria-label="Basic example"
     >
       <button
+        style={buttonleft}
         type="button"
-        className="btn btn-primary btn-lg"
+        className="btn btn-lg custom-height"
         onClick={navigateToHome}
       >
         <img src={HomeSvg} alt="home" />
       </button>
       <button
+        style={buttonMidle}
         type="button"
-        className="btn btn-primary btn-lg"
+        className="btn btn-lg"
         onClick={navigateToMenu}
       >
         <img src={MenuSvg} alt="menu" />
       </button>
       <button
+        style={buttonRight}
         type="button"
-        className="btn btn-primary btn-lg"
+        className="btn btn-lg"
         onClick={navigateToOrder}
       >
         <img src={OrderSvg} alt="order" />

@@ -17,6 +17,7 @@ function Menu() {
               <div className="col-3">
                 <input
                   type="number"
+                  min={0}
                   className="form-control"
                   id={`quantityInput-${item.id}`}
                 />
