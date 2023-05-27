@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Home from "../components/home/home";
-import Menu from "../components/menu/menu";
-import Order from "../components/order/order";
+import Home from "../components/client/home";
+import Menu from "../components/client/menu";
+import Order from "../components/client/order";
 import AdmHome from "../components/admin/admHome";
 import AdmMenu from "../components/admin/admMenu";
 import AdmOrders from "../components/admin/admOrders";
