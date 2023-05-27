@@ -1,3 +1,4 @@
+//components
 import AdminLowerMenu from "../shared/adminLowerMenu";
 //routes
 import { useNavigate } from "react-router-dom";
@@ -5,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 //img
 import EditSvg from "../../assets/edit.svg";
 import DeleteSvg from "../../assets/delete.svg";
+import CreateSvg from "../../assets/create.svg";
 function AdmMenu() {
   const items = [
     { id: 1, name: "Espaguete à bolonhesa", price: 7.99, description: "food" },
@@ -38,9 +40,8 @@ function AdmMenu() {
     navigate("/admEdit");
   }
   //trabalhar aqui
-  function navigateToDelete() {
-    navigate("/admEdit");
-  }
+  function navigateToDelete() {}
+  function navigateToCreate() {}
   return (
     <>
       <h1>Menu admin</h1>
@@ -48,8 +49,10 @@ function AdmMenu() {
         {items.map((item) => (
           <li key={item.id} className="list-group-item">
             <div className="row">
-              <div className="col-2">${item.price}</div>
-              <div className="col-6">{item.name}</div>
+              <div className="col-2 d-flex align-items-center">
+                ${item.price}
+              </div>
+              <div className="col-6 d-flex align-items-center">{item.name}</div>
               <div className="col-2">
                 <button type="button" className="btn" onClick={navigateToEdit}>
                   <img src={EditSvg} alt="edit button" />
@@ -67,6 +70,11 @@ function AdmMenu() {
             </div>
           </li>
         ))}
+        <li className="text-center">
+          <button type="button" className="btn" onClick={navigateToCreate}>
+            <img src={CreateSvg} alt="create a new item button" />
+          </button>
+        </li>
       </ul>
       <AdminLowerMenu></AdminLowerMenu>
     </>
